@@ -1,0 +1,33 @@
+/*
+    1. Positioning
+    2. Box Model
+    3. Typography
+    4. Visual effects
+    5. Other
+*/
+
+:root {
+    /*Colors*/
+    --linear-bg: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D5;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C;
+    --warm-black-plus: #282623;
+    --grey: #BABABA;
+    --off-white: #F1F8F7;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'DM Sans', sans-serif;
+}
+
