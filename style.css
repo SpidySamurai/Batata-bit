@@ -98,6 +98,10 @@ header img {
     border-radius: 5px;
 }
 
+/*.header--title-container .header--button:hover{*/
+/*    background-color: var(--soft-orange);*/
+/*}*/
+
 .header--button span {
     display: inline-block;
     width: 1.3rem;
@@ -160,7 +164,7 @@ main {
     color: #757575;
 }
 
-.main-currency-table {
+.main-currency-table, .main-comission-table {
     width: 70%;
     min-width: 23.5rem;
     max-width: 50rem;
@@ -179,7 +183,7 @@ main {
     text-align: left;
 }
 
-.currency-table--container {
+.currency-table--container, .comission-table--container {
     width: 90%;
     min-width: 23rem;
     max-width: 30rem;
@@ -187,12 +191,12 @@ main {
     margin: 0 auto;
 }
 
-.currency-table--container table {
+.currency-table--container table, .comission-table--container table {
     width: 100%;
     height: 100%;
 }
 
-.currency-table--container td {
+.currency-table--container td, .comission-table--container td {
     width: 50%;
     font-size: 1.6rem;
     font-weight: 500;
@@ -217,7 +221,7 @@ main {
     border-radius: 0 0 1.5rem 0;
 }
 
-.currency-table--container .table__right {
+.currency-table--container .table__right,.comission-table--container .table__right {
     font-size: 1.4rem;
     font-weight: normal;
     line-height: 1.7rem;
@@ -250,15 +254,46 @@ main {
 .currency-table--date {
     display: flex;
     align-items: center;
-    width: 75%;
-    height: 3rem;
+    text-align: center;
+    width: 80%;
+    height: 3.5rem;
     margin: 1.5rem auto;
     background-color: var(--soft-orange);
     border-radius: .5rem;
 }
 
 .currency-table--date p {
+    width: 100%;
     font-size: 1.2rem;
     line-height: 1.4rem;
+    color: var(--warm-black);
+}
+
+.main-comission-table .comission-table--title{
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 2.3rem;
+    color: var(--secondary-blue);
+    text-align: left;
+}
+
+.comission-table--date {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: 3.5rem;
+    margin: 1.5rem auto;
+    background-color: var(--soft-blue);
+    border-radius: .5rem;
+}
+
+.comission-table--date p {
+    width: 100%;
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+    color: var(--warm-black);
 }
 
