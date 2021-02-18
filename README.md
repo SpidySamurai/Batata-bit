@@ -1,8 +1,8 @@
-# Batata-bit
+# Batata-bit   ![Batata-logo](https://github.com/SpidySamurai/Batata-bit/blob/master/Assets/img/logo.svg)
 
-Proyecto realizado con el enfoque responsive mobile-first usando flexbox y layout.
+Project made with the mobile-first responsive approach using flexbox and layout.
 
-Conocimientos aplicados:
+Applied knowledge:
 
 * HTML
 * CSS
