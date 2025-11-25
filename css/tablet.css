@@ -1,5 +1,40 @@
+
+.site-header {
+    padding: 2rem 4rem;
+}
+
+.site-header__inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header__heading {
+    flex: 1 1 auto;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.site-header__brand {
+    align-items: flex-start;
+}
+
+.site-nav {
+    width: auto;
+    flex-shrink: 0;
+}
+
+.site-nav__list {
+    justify-content: flex-end;
+    gap: 2.4rem;
+}
+
 .main-table--slider{
 justify-content: center;
+}
+
+.plans-card--container--slider {
+    justify-content: center;
 }
 
 .product-cards--container{
@@ -9,7 +44,34 @@ justify-content: center;
     margin: 0 auto;
 }
 
-.plans-card--container--slider {
-    justify-content: center;
+.about__content {
+    align-items: flex-start;
+    text-align: left;
+    gap: 4.8rem;
+}
+
+.about__lead {
+    font-size: 1.7rem;
+    line-height: 2.6rem;
+}
+
+.about__list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about__cta {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 3.6rem 4rem;
+}
+
+.about__cta-copy {
+    max-width: 60ch;
+}
+
+.about__button {
+    align-self: center;
 }
 
