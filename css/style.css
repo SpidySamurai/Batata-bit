@@ -401,7 +401,7 @@ main {
     width: 100%;
     min-width: 32rem;
     height: auto;
-    padding: 2rem 1rem;
+    padding: 4rem 1.6rem 6rem;
     background-color: var(--warm-black);
 }
 
@@ -438,26 +438,61 @@ main {
     color: #808080;
 }
 
-.product-detail--card {
+
+.product-cards--container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
     width: 90%;
-    min-width: 28.8rem;
-    max-width: 40rem;
-    min-height: 15.2rem;
-    margin: 1.5rem auto;
-    padding: 2rem;
-    background-color: #282623;
-    border-radius: .5rem;
-    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.16);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.product-detail--card {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 18rem;
+    padding: 2.8rem 2.6rem;
+    background: linear-gradient(140deg, rgba(40, 38, 35, 0.92), rgba(24, 22, 20, 0.88));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 1.6rem;
+    box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.32);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-detail--card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--card-accent, rgba(247, 147, 26, 0.6)) 0%, transparent 70%);
+    opacity: 0.2;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.product-detail--card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.product-detail--card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 1.8rem 4rem rgba(0, 0, 0, 0.36);
 }
 
 .product-detail--card .icon-card {
-    display: inline-block;
-    width: 2rem;
-    height: 2rem;
-    margin-bottom: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1.6rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
     background-position: center;
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: 60%;
 }
 
 .clock {
@@ -477,18 +512,34 @@ main {
 }
 
 .product--card-title {
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.9rem;
     font-weight: bold;
-    line-height: 1.8rem;
+    line-height: 2.4rem;
     color: var(--white);
 }
 
 .product--card-body {
-    font-size: 1.4rem;
+    font-size: 1.45rem;
     font-weight: 500;
-    line-height: 1.8rem;
-    color: #808080;
+    line-height: 2.2rem;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.product-detail--card:nth-child(1) {
+    --card-accent: rgba(247, 147, 26, 0.8);
+}
+
+.product-detail--card:nth-child(2) {
+    --card-accent: rgba(26, 154, 247, 0.75);
+}
+
+.product-detail--card:nth-child(3) {
+    --card-accent: rgba(255, 233, 213, 0.6);
+}
+
+.product-detail--card:nth-child(4) {
+    --card-accent: rgba(129, 255, 138, 0.6);
 }
 
 .about {
@@ -681,117 +732,168 @@ main {
 
 }
 
+
 .plans-card--container--slider {
     display: flex;
-    gap: .5rem;
-    height: 33rem;
-    overflow-x: scroll;
+    gap: 1.6rem;
+    padding: 2rem 0 3.2rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 2rem;
     overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
 }
 
 .plans-detail--card {
     position: relative;
-    scroll-snap-align: center;
-    width: 50%;
-    min-width: 19rem;
+    flex: 0 0 25rem;
     max-width: 25rem;
-    height: 25rem;
-    margin: 5rem .5rem 0;
-    padding: 0 1.5rem;
+    min-height: 30rem;
+    padding: 3.2rem 2.4rem 2.4rem;
+    border-radius: 1.6rem;
     background-color: var(--white);
-    border-radius: 1.5rem;
-    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.16);
+    border: 1px solid rgba(32, 30, 28, 0.08);
+    box-shadow: 0 1rem 2.4rem rgba(32, 30, 28, 0.12);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: center;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.plans-detail--card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1.4rem 2.8rem rgba(32, 30, 28, 0.16);
 }
 
 .card--spec {
     position: absolute;
-    width: 12rem;
-    height: 2.6rem;
-    left: calc(50% - 6rem);
-    top: -1.3rem;
+    top: -1.6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.8rem 1.8rem;
+    border-radius: 999px;
     font-size: 1.2rem;
-    padding: .6rem;
-    border-radius: .8rem;
-    color: var(--white);
+    font-weight: 700;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    box-shadow: 0 1.2rem 2.4rem rgba(32, 30, 28, 0.12);
 }
 
 .recomend--color {
-    background-color: var(--bitcoin-orange);
-    border: solid var(--bitcoin-orange) .2rem;
-
+    background: var(--bitcoin-orange);
+    color: var(--warm-black);
 }
 
 .basic--color {
-    background-color: var(--secondary-blue);
-    border: solid var(--secondary-blue) .2rem;
-
+    background: var(--secondary-blue);
+    color: var(--white);
 }
 
 .vip--color {
     background: var(--linear-bg);
-    border: solid var(--linear-bg) .2rem;
+    color: var(--white);
+}
 
+.plan-info--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    width: 100%;
+    height: 100%;
+    flex: 1 1 auto;
 }
 
 .plan-card--title {
-    padding-top: 2rem;
-    font-size: 1.4rem;
-    font-weight: 500;
-    line-height: 1.8rem;
-    color: black;
+    padding-top: 0.4rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 2.2rem;
+    color: var(--warm-black);
 }
 
 .plan-card--price {
-    padding: .5rem 0;
-    font-size: 5.2rem;
-    font-weight: bold;
-    color: black;
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.4rem;
+    font-size: 4.4rem;
+    font-weight: 700;
+    color: var(--warm-black);
 }
 
 .plan-card--price span {
-    font-size: 1.2rem;
-    font-weight: 300;
-    vertical-align: 2.5rem;
-}
-
-.plan-card--saving {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    line-height: 1.4rem;
-    color: #757575;
+    line-height: 1;
 }
 
+.plan-card--saving,
 .plan-card--vip-saving {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: 500;
-    line-height: 1.4rem;
-    color: #757575;
+    line-height: 1.8rem;
+    color: #6c6c6c;
+    text-align: center;
 }
 
 .plan-card--ca {
-    position: absolute;
-    left: calc(50% - 7.5rem);
-    top: calc(50% + 4.5rem);
-    width: 15rem;
-    height: 4.8rem;
+    width: 100%;
+    margin-top: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1.3rem 0;
+    border: none;
+    border-radius: 999px;
     font-size: 1.4rem;
-    font-weight: bold;
-    line-height: 1.8rem;
-    box-shadow: 0 .4rem .8rem rgba(0, 0, 0, 0.16);
-    background-color: #faf8f7;
-    border-radius: .8rem;
-    color: black;
+    font-weight: 700;
+    line-height: 1;
     font-family: 'DM Sans', sans-serif;
+    cursor: pointer;
+    background: var(--warm-black);
+    color: var(--white);
+    box-shadow: 0 0.6rem 1.6rem rgba(32, 30, 28, 0.16);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card--ca:hover,
+.plan-card--ca:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 2.2rem rgba(32, 30, 28, 0.2);
+    outline: none;
 }
 
 .plan-card--ca span {
     display: inline-block;
-    width: 2rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     background-image: url("../Assets/icons/orange-right-arrow.svg");
     background-repeat: no-repeat;
-    vertical-align: text-bottom;
+    background-size: contain;
+}
+
+.plan-card--ca.recomend--color {
+    background: var(--bitcoin-orange);
+    color: var(--warm-black);
+    box-shadow: 0 0.8rem 2rem rgba(247, 147, 26, 0.3);
+}
+
+.plan-card--ca.basic--color {
+    background: var(--secondary-blue);
+    color: var(--white);
+    box-shadow: 0 0.8rem 2rem rgba(26, 154, 247, 0.28);
+}
+
+.plan-card--ca.vip--color {
+    background: var(--linear-bg);
+    color: var(--white);
+    box-shadow: 0 0.8rem 2rem rgba(32, 30, 28, 0.22);
 }
 
 footer {

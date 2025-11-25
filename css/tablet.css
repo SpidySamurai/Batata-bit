@@ -35,13 +35,27 @@ justify-content: center;
 
 .plans-card--container--slider {
     justify-content: center;
+    overflow-x: visible;
+    gap: 2.4rem;
+    padding: 2.4rem 0 4rem;
+}
+
+.plans-detail--card {
+    flex: 0 0 26rem;
 }
 
 .product-cards--container{
-    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 88rem;
-    margin: 0 auto;
+    justify-content: center;
+    gap: 2.4rem;
+    width: 100%;
+    max-width: var(--content-max-width);
+}
+
+.product-detail--card {
+    flex: 1 1 calc(50% - 2.4rem);
+    max-width: 44rem;
 }
 
 .about__content {
