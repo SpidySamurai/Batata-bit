@@ -1,0 +1,42 @@
+:root {
+  /* Absolute Colors (Palette) */
+  --linear-bg: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+  --bitcoin-orange: #f7931a;
+  --soft-orange: #ffe9d5;
+  --secondary-blue: #1a9af7;
+  --soft-blue: #e7f5ff;
+  --warm-black: #201e1c;
+  --warm-black-plus: #282623;
+  --grey: #bababa;
+  --off-white: #f1f8f7;
+  --white: #ffffff; /* Always White */
+  
+  --content-max-width: 96rem;
+
+  /* Semantic Theme Variables (Light Mode Default) */
+  --bg-body: var(--white);
+  --bg-card: var(--white);
+  --text-primary: var(--warm-black);
+  --text-secondary: #757575;
+  --header-bg: rgba(255, 255, 255, 0.9);
+  --border-color: rgba(32, 30, 28, 0.08); /* Light grey border */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Theme Overrides */
+    --bg-body: #121212;
+    --bg-card: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --header-bg: rgba(18, 18, 18, 0.9);
+    --border-color: rgba(255, 255, 255, 0.1);
+    
+    /* Adjust specific semantic colors for dark mode */
+    --soft-orange: #3a2818;
+    --soft-blue: #182a3a;
+    --grey: #e0e0e0;
+    
+    /* Note: --white and --warm-black stay absolute colors */
+  }
+}

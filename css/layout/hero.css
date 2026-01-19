@@ -1,0 +1,41 @@
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  min-width: 32rem;
+  height: 33.4rem;
+  text-align: center;
+  background: var(--linear-bg);
+}
+
+.hero__wordmark {
+  width: 15rem;
+  height: 2.4rem;
+  align-self: center;
+}
+
+.header--title-container {
+  width: 90%;
+  min-width: 28.8rem;
+  max-width: 90rem;
+  height: 21.8rem;
+  margin-top: 5rem;
+  align-self: center;
+}
+
+.header--title-container h1 {
+  font-size: 2.4rem;
+  font-weight: bold;
+  line-height: 2.6rem;
+  color: var(--white); /* Always White (Dark BG) */
+}
+
+.header--title-container p {
+  margin-top: 2.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: var(--soft-orange);
+}

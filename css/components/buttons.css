@@ -1,0 +1,138 @@
+/* Main Header Button */
+.header--title-container .header--button {
+  /* Positioning is defined in hero.css (layout) but visual styles are here */
+  /* Re-stating absolute positioning might be needed if not cascading well, 
+     but we left the container in hero.css. 
+     The class .header--button is on the anchor tag.
+     If we strip styles from style.css, we need to make sure we didn't lose the positioning properties
+     if we moved them here. 
+     In hero.css I ONLY kept the specific layout properties if I did it right.
+     Let's check hero.css content I wrote... 
+     I wrote:
+     .header--title-container .header--button { position: absolute; left... top... }
+     So here I should ONLY put visual styles.
+  */
+  display: block;
+  /* margin-top: 3.5rem; */ /* This interacts with position */
+
+  padding: 1.5rem;
+  width: 22.9rem;
+  height: 4.8rem;
+  background-color: var(--off-white);
+  /* Dark mode logic handled via variables or overrides? 
+     We had a specific override in style.css: background-color: #f1f8f7; */
+  background-color: #f1f8f7; 
+
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--warm-black);
+
+  box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.header--title-container .header--button:hover {
+  background-color: var(--soft-orange);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(89, 73, 30, 0.2);
+}
+
+.header--button span {
+  display: inline-block;
+  width: 1.3rem;
+  height: 0.8rem;
+  margin-inline-start: 1rem;
+  background-image: url("../../assets/icons/down-arrow.svg");
+}
+
+/* About Section Button */
+.about__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.4rem 3rem;
+  background-color: var(--bitcoin-orange);
+  color: var(--warm-black);
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 0.8rem 1.6rem rgba(247, 147, 26, 0.32);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.about__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1.2rem 2.2rem rgba(247, 147, 26, 0.38);
+}
+
+.about__button:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 1.2rem 2.2rem rgba(247, 147, 26, 0.38);
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
+
+/* Plan Card CTA Button */
+.plan-card--ca {
+  width: 100%;
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  padding: 1.3rem 0;
+  border: none;
+  border-radius: 999px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: "DM Sans", sans-serif;
+  cursor: pointer;
+  background: var(--warm-black);
+  color: var(--white);
+  box-shadow: 0 0.6rem 1.6rem rgba(32, 30, 28, 0.16);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.plan-card--ca:hover,
+.plan-card--ca:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 1rem 2.2rem rgba(32, 30, 28, 0.2);
+  outline: none;
+}
+
+.plan-card--ca span {
+  display: inline-block;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-image: url("../../assets/icons/orange-right-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.plan-card--ca.recomend--color {
+  background: var(--bitcoin-orange);
+  color: var(--warm-black);
+  box-shadow: 0 0.8rem 2rem rgba(247, 147, 26, 0.3);
+}
+
+.plan-card--ca.basic--color {
+  background: var(--secondary-blue);
+  color: var(--white);
+  box-shadow: 0 0.8rem 2rem rgba(26, 154, 247, 0.28);
+}
+
+.plan-card--ca.vip--color {
+  background: var(--linear-bg);
+  color: var(--white);
+  box-shadow: 0 0.8rem 2rem rgba(32, 30, 28, 0.22);
+}

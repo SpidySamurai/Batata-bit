@@ -1,0 +1,143 @@
+/* Tables Styling */
+.main-table--slider {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: scroll;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding-bottom: 1rem;
+}
+
+.main-currency-table,
+.main-comission-table {
+  scroll-snap-align: center;
+  width: 70%;
+  min-width: 23.5rem;
+  max-width: 50rem;
+  height: 36rem;
+  margin: 0 0.5rem auto;
+  font-family: "Inter", sans-serif;
+}
+
+.main-currency-table .currency-table--title {
+  margin-bottom: 1.5rem;
+  margin-inline-start: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--bitcoin-orange);
+}
+
+.currency-table--container,
+.comission-table--container {
+  width: 90%;
+  min-width: 23rem;
+  max-width: 30rem;
+  height: 20rem;
+  margin: 0 auto;
+}
+
+.currency-table--container table,
+.comission-table--container table {
+  width: 100%;
+  height: 100%;
+}
+
+.currency-table--container td,
+.comission-table--container td {
+  width: 50%;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.9rem;
+  color: var(--grey);
+  background-color: var(--bg-card); /* Dynamic */
+}
+
+.table__top-left {
+  border-radius: 1.5rem 0 0 0;
+}
+
+.table__top-right {
+  border-radius: 0 1.5rem 0 0;
+}
+
+.table__bottom-left {
+  border-radius: 0 0 0 1.5rem;
+}
+
+.table__bottom-right {
+  border-radius: 0 0 1.5rem 0;
+}
+
+.currency-table--container .table__right,
+.comission-table--container .table__right {
+  font-size: 1.4rem;
+  font-weight: normal;
+  line-height: 1.7rem;
+  color: var(--text-secondary); /* Dynamic */
+}
+
+.currency-table--container .down {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-inline-start: 1rem;
+  background-image: url("../../assets/icons/trending-down.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.currency-table--container .up {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-inline-start: 1rem;
+  align-self: center;
+  background-image: url("../../assets/icons/trending-up.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-comission-table .comission-table--title {
+  margin-bottom: 1.5rem;
+  margin-inline-start: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 2.3rem;
+  color: var(--secondary-blue);
+}
+
+.table--date {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  max-width: 25rem;
+  height: 3.5rem;
+  margin: 1.5rem auto;
+  border-radius: 0.5rem;
+}
+
+.currency-color {
+  background-color: var(--soft-orange);
+}
+
+.comission-color {
+  background-color: var(--soft-blue);
+}
+
+.table--date p {
+  width: 100%;
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+  color: var(--warm-black);
+  /* The date box backgrounds are --soft-orange/blue. 
+     In dark mode, these are darkened, so --warm-black text (dark) might have poor contrast.
+     Let's allow this to be --text-primary (white in dark mode) or keep it dark?
+     --soft-orange in dark is #3a2818 (very dark brown).
+     --warm-black on #3a2818 is invisible.
+     So this needs to be --text-primary (White) in dark mode. */
+  color: var(--text-primary); 
+}

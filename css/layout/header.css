@@ -1,0 +1,99 @@
+.site-header {
+  width: 100%;
+  padding: 1.6rem 2rem;
+  background-color: var(--header-bg); /* Dynamic Glassmorphism */
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color); /* Dynamic */
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.site-header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.site-header__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.site-header__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+.site-header__brand:focus-visible,
+.site-header__brand:hover {
+  text-decoration: none;
+}
+
+.site-header__title {
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 1.9rem;
+  color: var(--text-primary); /* Dynamic */
+}
+
+.site-header__subtitle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--secondary-blue);
+}
+
+.site-header__brand:focus-visible .site-header__title,
+.site-header__brand:hover .site-header__title {
+  color: var(--bitcoin-orange);
+}
+
+.site-header__brand:focus-visible .site-header__subtitle,
+.site-header__brand:hover .site-header__subtitle {
+  color: var(--secondary-blue);
+}
+
+.site-header__logo {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.site-nav {
+  width: 100%;
+}
+
+.site-nav__list {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav__link {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.08rem;
+  text-transform: uppercase;
+  color: var(--text-primary); /* Dynamic */
+  text-decoration: none;
+}
+
+.site-nav__link:focus-visible,
+.site-nav__link:hover {
+  color: var(--bitcoin-orange);
+}
